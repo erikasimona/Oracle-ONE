@@ -14,10 +14,10 @@ function inserePlacar(){
 }
 
 
-function novaLinha(usuario,palavras){
+function novaLinha(usuario,numPalavras){
     var linha = $("<tr>");
     var colunaUsuario = $("<td>").text(usuario);
-    var colunaPalavras = $("<td>").text(palavras);
+    var colunaPalavras = $("<td>").text(numPalavras);
     var colunaRemover = $("<td>");
 
     var link = $("<a>").addClass("botao-remover").attr("href","#");
@@ -33,7 +33,7 @@ function novaLinha(usuario,palavras){
     return linha;
 }
 
-function removeLinha(){
+function removeLinha(event){
     event.preventDefault();
     $(this).parent().parent().remove();
 }
