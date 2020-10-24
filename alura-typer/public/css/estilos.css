@@ -29,3 +29,12 @@ table td, table th{text-align: center;}
 .placar{display: none;}
 
 body{overflow: scroll;}
+
+#erro{
+    color: red;
+    display: none;
+}
+
+#spinner{display: none;}
+
+#frase-id{width: 40px;}
