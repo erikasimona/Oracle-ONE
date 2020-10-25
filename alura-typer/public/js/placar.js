@@ -3,7 +3,7 @@ $("#botao-sync").click(sincronizaPlacar);
 
 function inserePlacar(){
     var corpoTabela = $(".placar").find("tbody");
-    var usuario = "erika";
+    var usuario = $("#usuarios").val();
     var numPalavras = $("#contador-palavras").text();
 
     //var botaoRemover = "<a href='#' class='botao-remover'><i class='small material-icons'>delete</i></a>";
@@ -77,17 +77,24 @@ function sincronizaPlacar(){
     var dados = {
         placar: placar
     };
-    $.post("http://localhost:3000/placar", dados, function(){
-        console.log("salvou")
+    $.post("http://localhost:3000/placar", dados , function() {
+        console.log("Placar sincronizado com sucesso");
+        $(".tooltip").tooltipster("open"); 
+    }).fail(function(){
+        $(".tooltip").tooltipster("open").tooltipster("content", "Falha ao sincronizar"); 
+    }).always(function(){ 
+        setTimeout(function() {
+            $(".tooltip").tooltipster("close"); 
+        }, 1200);
     });
 }
 
 function atualizaPlacar(){
     $.get("http://localhost:3000/placar", function(data){
-    $(data).each(function(){
-        var linha =novaLinha(this.usuario, this.pontos);
-        linha.find(".botao-remover").click(removeLinha);
-        $("tbody").append(linha);
+        $(data).each(function(){
+            var linha = novaLinha(this.usuario, this.pontos);
+            linha.find(".botao-remover").click(removeLinha);
+            $("tbody").append(linha);
+        });
     });
-});
 }
