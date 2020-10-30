@@ -1,0 +1,33 @@
+.container{
+    width: 96%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h3{
+    font-size: 2.4em;
+    margin-bottom: 15px;
+}
+
+h4{
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.subscribe{
+    display: inline-block;
+    margin: 50px auto 60px;
+    border: none;
+    background: none;
+}
+.subscribe a{
+    color: white;
+    padding: 20px 40px;
+    background-color: #48A3A6;
+    border-radius: 8px;
+    text-decoration: none;
+    box-shadow: 5px 5px 8px black;
+    font-size: 18px;
+    text-transform: uppercase ;
+    border: none;
+}

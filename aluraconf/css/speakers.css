@@ -1,0 +1,39 @@
+.palestrantes{
+    background-color: #EF7247;
+    padding-top: 30px;
+}
+
+.palestrantes h3{
+    text-transform: uppercase;
+    color: white;
+}
+
+.palestrantes h4{
+    color: white;
+}
+
+.fichas{
+    text-align: center;
+}
+.fichas .box{
+    display: inline-block;
+    vertical-align: top;
+    padding: 20px;
+    background-color: white;
+    margin: 10px;
+    width: 230px;
+    border-radius: 8px;
+}
+
+.speaker-portrait img{
+    border-radius: 200px;
+}
+
+.speaker-portrait .speaker-name{
+    margin-top: 10px;
+}
+
+.speaker-portrait .speaker-bio{
+    font-weight: bold;
+    margin: 10px auto 16px;
+}

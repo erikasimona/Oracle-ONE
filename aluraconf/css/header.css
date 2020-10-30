@@ -1,0 +1,52 @@
+header{
+    background: url(../img/destaque.jpeg) no-repeat;
+    background-size: cover;
+    padding-top: 32px;
+}
+
+header .main-menu, .main-abre/*.jumbotron*/{
+    text-align: center;
+    text-transform: uppercase;
+}
+
+header .menu-item{
+    display: inline-block;
+    margin: 0 2px 32px 0;
+}
+
+header .menu-item a{
+    color: white;
+    padding: 16px;
+    background: rgba(0,0,0,0.1);
+    border-radius: 8px;
+   /* text-transform: uppercase;*/
+    text-decoration: none;
+    transition: background-color 0.5s;
+}
+
+header .menu-item a:hover{
+    background-color: #48A3A6;
+}
+
+header .panel-main{
+    text-shadow: 5px 5px 8px black;
+    letter-spacing: -1px;
+}
+
+header .h1{
+    color: white;
+    font-size: 3em;
+}
+
+header .h2{
+    color:#64ff64;
+    font-size: 2.7em;
+    margin-top: 5px;
+}
+
+@media screen and (min-width: 750px){
+    header .main-abre{
+        font-size: 28px;
+    }
+}
+
