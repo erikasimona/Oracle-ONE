@@ -84,6 +84,13 @@
   }
 }
 
+@media (max-width: 760px) {
+  section div form .coluna-esquerda, section div form .coluna-direita{
+    padding: 5px!important;
+  }
+
+}
+
 /*--------------------------------------------------------------
 # Sections General
 --------------------------------------------------------------*/
@@ -137,7 +144,9 @@ section {
 
 .div-mapa-efraim {
   text-align: center;
-  margin: 60px 25px;
+  /*margin: 60px 60px 100px 60px;*/
+  width: 100%;
+  padding: 50px 15px;
 }
 
 .mapa-efraim {
@@ -145,7 +154,6 @@ box-shadow: 2px 2px 2px 0 grey;
 border: 1px solid #77CC66; 
 width: 100%; 
 height: 400px;
-
 }
 
 
@@ -153,8 +161,13 @@ height: 400px;
 /*--------------------------------------------------------------
 # Contact
 --------------------------------------------------------------*/
-.coluna-esquerda, .coluna-direita{
-  padding-right: 25px!important;
+ .coluna-esquerda, a{
+  padding-right: 45px!important;
+} 
+
+.coluna-direita {
+  padding-right: 0;
+  padding-left: 45px!important;
 }
 
 .formulario-estilo {
@@ -162,6 +175,8 @@ height: 400px;
   border: 1px solid #77CC66;
   border-radius: .25rem;
 }
+
+
 
 .formulario-estilo:focus {
   background-color: #F3F1F4;
@@ -188,10 +203,10 @@ height: 400px;
 .contact .php-email-form button[type="submit"] {
   background:#77CC66;
   border: 0;
-  padding: 10px 30px 30px;
+  /*padding: 10px 30px 30px;*/
   color: #fff;
   transition: 0.4s;
-  margin-top:40px;
+  margin-top:54px;
   } 
 
 .contact .info {
@@ -301,7 +316,7 @@ height: 400px;
   border-radius: 0.25rem;
   /*box-shadow: none;*/
   font-size: 14px;
-  height: 250px;
+  height: 240px;
 }
 
 .contact .php-email-form input {
