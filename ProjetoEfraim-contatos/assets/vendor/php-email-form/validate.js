@@ -3,6 +3,8 @@
 * URL: https://bootstrapmade.com/php-email-form/
 * Author: BootstrapMade.com
 */
+$('#tel').mask("(00) 00009-0000");
+
 !(function($) {
   "use strict";
 
@@ -12,8 +14,9 @@
     var f = $(this).find('.form-group'),
       ferror = false,
       emailExp = /^[^\s()<>@,;:\/]+@\w[\w\.-]+\.[a-z]{2,}$/i;
+      var telExp = /^\([0-9]{2}\)[\s][0-9]{4,5}-[0-9]{4}$/;
 
-    f.children('input').each(function() { // run all inputs
+    f.children('.form-control').each(function() { // run all inputs
      
       var i = $(this); // current input
       var rule = i.attr('data-rule');
@@ -46,6 +49,12 @@
               ferror = ierror = true;
             }
             break;
+          
+          case 'tel':
+            if (!telExp.test(i.val())) {
+              ferror = ierror = true;
+            }
+            break;  
 
           case 'checked':
             if (! i.is(':checked')) {
@@ -63,7 +72,8 @@
         i.next('.validate').html((ierror ? (i.attr('data-msg') !== undefined ? i.attr('data-msg') : 'wrong Input') : '')).show('blind');
       }
     });
-    f.children('textarea').each(function() { // run all inputs
+    
+    /* f.children('textarea').each(function() { // run all inputs
 
       var i = $(this); // current input
       var rule = i.attr('data-rule');
@@ -94,6 +104,8 @@
         i.next('.validate').html((ierror ? (i.attr('data-msg') != undefined ? i.attr('data-msg') : 'wrong Input') : '')).show('blind');
       }
     });
+    */
+
     if (ferror) return false;
 
     var this_form = $(this);
